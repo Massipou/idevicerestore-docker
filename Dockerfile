@@ -24,11 +24,18 @@ libzip-dev \
 python3-dev \
 #python-dev \
 readline-dev \
-libxml2-dev
+libxml2-dev \
+libtool
 
 run git clone https://github.com/libimobiledevice/libplist.git /usr/src/libplist && \
 cd /usr/src/libplist && \
 ./autogen.sh && make && make install 
+
+
+run git clone https://github.com/libimobiledevice/libtatsu /usr/src/libtatsu && \
+cd /usr/src/libtatsu && \
+./autogen.sh && make && make install
+
 
 run git clone https://github.com/libimobiledevice/libimobiledevice-glue.git /usr/src/libimobiledevice-glue && \
 cd /usr/src/libimobiledevice-glue && \
